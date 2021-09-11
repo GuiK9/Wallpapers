@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="00000.png" alt="" id="foto" style="width: 90%;">
+
+    <br>
+    <button id="proximo">próximo</button>
+    <button id="anterior">anterior</button>
+    
+    
+    <script>
+        let foto = document.getElementById("foto")
+        let i = 0
+
+        let pBotao = document.getElementById("proximo")
+        pBotao.onclick = pf
+
+        let aBotao = document.getElementById("anterior")
+        aBotao.onclick = fa
+
+
+
+        function pf() {
+            i++
+            console.log(i + " //INDEX")
+
+            let v = 0
+            if (i <= 9) {
+                v = 1
+            } else if (i > 9 && i <= 99){
+                v = 2
+            } else if (i > 99) {
+                v = 3
+            }
+
+            let str_img = foto.src
+            let substr_img = str_img.slice(22, 27)
+
+            console.log(v)
+
+            switch (v){
+            case 1:
+                let nova_substr_img = "0000" + i
+                //console.log(nova_substr_img + " nova substring img")
+
+                var change_substr_img = foto.src.replace(substr_img, nova_substr_img)
+                //console.log(change_substr_img + " change substring imagem")
+
+                foto.src = change_substr_img
+                //console.log(foto.src)
+
+            break
+            case 2:
+                let nova_substr_img_10 = "000" + i
+                // console.log(nova_substr_img_10 + " nova substring img")
+
+                change_substr_img = foto.src.replace(substr_img, nova_substr_img_10)
+                //console.log(change_substr_img + " change substring imagem")
+
+                foto.src = change_substr_img
+                //console.log(foto.src)
+            break
+
+            case 3:
+                
+                let nova_substr_img_100 = "00" + i
+                console.log(nova_substr_img_100 + "nova substring")
+                change_substr_img = foto.src.replace(substr_img, nova_substr_img_100)
+
+                foto.src = change_substr_img
+            break
+            }
+
+        }
+
+        function fa() {
+            i--
+            console.log(i + " //INDEX")
+
+            let v = 0
+            if (i <= 9) {
+                v = 1
+            } else if (i > 9 && i <= 99){
+                v = 2
+            } else if (i > 99) {
+                v = 3
+            }
+
+            let str_img = foto.src
+            let substr_img = str_img.slice(22, 27)
+
+            console.log(v)
+
+            switch (v){
+            case 1:
+                let nova_substr_img = "0000" + i
+                //console.log(nova_substr_img + " nova substring img")
+
+                var change_substr_img = foto.src.replace(substr_img, nova_substr_img)
+                //console.log(change_substr_img + " change substring imagem")
+
+                foto.src = change_substr_img
+                //console.log(foto.src)
+
+            break
+            case 2:
+                let nova_substr_img_10 = "000" + i
+                // console.log(nova_substr_img_10 + " nova substring img")
+
+                change_substr_img = foto.src.replace(substr_img, nova_substr_img_10)
+                //console.log(change_substr_img + " change substring imagem")
+
+                foto.src = change_substr_img
+                //console.log(foto.src)
+            break
+
+            case 3:
+                
+                let nova_substr_img_100 = "00" + i
+                console.log(nova_substr_img_100 + "nova substring")
+                change_substr_img = foto.src.replace(substr_img, nova_substr_img_100)
+
+                foto.src = change_substr_img
+            break
+            }
+
+
+
+
+
+
+        }
+        
+        
+        
+        
+        
+        
+        // function PF(){
+        //     i++
+        //     let retorno = "0000" + i
+        //     let ds = foto.src
+        //     console.log(ds)
+        //     let substr = ds.slice(22, 27)
+        //     console.log(substr)
+            
+
+        //     let chang = foto.src.replace(substr, retorno)
+        //     foto.src = chang
+        //     console.log(foto.src)
+            
+        // }
+
+
+
+    </script>
+</body>
+</html>
