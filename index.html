@@ -5,13 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(36, 36, 36);
+        }
+    </style>
 </head>
 <body>
-    <img src="00000.png" alt="" id="foto" style="width: 90%;">
+    <img src="images/00000.png" alt="" id="foto" style="width: 90%;"> <br>
+
+
+    <button id="proximo">Próximo</button>
 
     <br>
-    <button id="proximo">próximo</button>
-    <button id="anterior">anterior</button>
+    <button id="anterior">Anterior</button>
     
     
     <script>
@@ -28,7 +35,6 @@
 
         function pf() {
             i++
-            console.log(i + " //INDEX")
 
             let v = 0
             if (i <= 9) {
@@ -40,12 +46,13 @@
             }
 
             let str_img = foto.src
-            let substr_img = str_img.slice(22, 27)
+            let substr_img = str_img.slice(29, 34)
 
             console.log(v)
 
             switch (v){
             case 1:
+                
                 let nova_substr_img = "0000" + i
                 //console.log(nova_substr_img + " nova substring img")
 
@@ -54,7 +61,7 @@
 
                 foto.src = change_substr_img
                 //console.log(foto.src)
-
+                console.log(change_substr_img)
             break
             case 2:
                 let nova_substr_img_10 = "000" + i
